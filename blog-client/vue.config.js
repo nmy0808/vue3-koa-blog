@@ -8,6 +8,7 @@ module.exports = {
       alias: {
         '@com': resolve(__dirname, './src/components'),
         '@views': resolve(__dirname, './src/views'),
+        '@router': resolve(__dirname, './src/router'),
         '@util': resolve(__dirname, './src/util'),
         '@assets': resolve(__dirname, './src/assets'),
         '@blocks': resolve(__dirname, './src/blocks'),

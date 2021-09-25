@@ -8,7 +8,9 @@
       "@util/*": ["./util/*"],
       "@assets/*": ["./assets/*"],
       "@view-provider": ["./view-provider/*"],
-      "@use": ["./use/*"]
+      "@use": ["./use/*"],
+      "@router": ["./router/*"]
+
     }
   },
   "exclude": ["node_modules", "cache"]
