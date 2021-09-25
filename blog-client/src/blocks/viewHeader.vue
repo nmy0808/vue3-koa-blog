@@ -10,13 +10,24 @@
         {{ title }}
       </template>
       <template #subTitle> {{ subTitle }} </template>
+      <template #extra>
+        <a-button
+          type="primary"
+          v-if="isShowBackBtn"
+          @click="$router.push({ name: 'Show' })"
+          >{{ extraTitle }}</a-button
+        >
+      </template>
     </a-page-header>
-    <buttonGroup :config="buttonGroup" class="buttonGroup"/>
+    <buttonGroup :config="buttonGroup" class="buttonGroup" />
   </div>
 </template>
 
 <script>
+import { computed, isRef, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import { buttonGroup } from '@use/showIndexButtonGroup.jsx';
+import { useCurrentRouterToNameWhiteStatus } from '@use/routerManage.js';
 export default {
   components: { buttonGroup },
   props: {
@@ -30,27 +41,35 @@ export default {
       avatar = {},
       title = '',
       subTitle = '',
-      buttonGroup =[]
+      buttonGroup = [],
+      unwantedBackWhiteList = [],
     } = props.config;
+    const extraTitle = '返回首页';
+    const isShowBackBtn = computed(
+      () =>
+        !useCurrentRouterToNameWhiteStatus(unwantedBackWhiteList).status.value,
+    );
     return {
+      isShowBackBtn,
       avatar,
       title,
       subTitle,
-      buttonGroup
+      buttonGroup,
+      extraTitle,
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.view-header{
+.view-header {
   margin-top: 10px;
 }
-.view-header-top{
+.view-header-top {
   width: 50vw;
   margin: 0 auto;
 }
-.buttonGroup{
+.buttonGroup {
   display: flex;
   justify-content: center;
 }

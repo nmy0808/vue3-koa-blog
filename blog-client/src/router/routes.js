@@ -26,6 +26,21 @@ export const routes = [
         name: 'ShowBook',
         component: () => import('@views/show/book.vue'),
       },
+      {
+        path: 'file',
+        name: 'ShowProject',
+        component: () => import('@views/show/project.vue'),
+      },
+      {
+        path: 'book',
+        name: 'ShowFile',
+        component: () => import('@views/show/file.vue'),
+      },
+      {
+        path: 'book',
+        name: 'ShowSponsor',
+        component: () => import('@views/show/sponsor.vue'),
+      },
     ],
   },
 ];

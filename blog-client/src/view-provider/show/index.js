@@ -1,3 +1,5 @@
+import { useRouterNameToPage } from '@use/routerManage.js';
+
 import {
   BookOutlined,
   ReadOutlined,
@@ -11,31 +13,32 @@ export const showIndexViewConfig = {
   },
   title: 'MingYan',
   subTitle: '展示自己',
+  unwantedBackWhiteList: ['ShowBlog'], // 不显示按钮
   buttonGroup: [
     {
       text: '日志',
       icon: <BookOutlined />,
-      handle: () => console.log('ha'),
+      handle: () => useRouterNameToPage('ShowBlog'),
     },
     {
       text: '读书',
       icon: <ReadOutlined />,
-      handle: () => console.log('ha'),
+      handle: () => useRouterNameToPage('ShowBook'),
     },
     {
       text: '项目',
       icon: <ScheduleOutlined />,
-      handle: () => console.log('ha'),
+      handle: () => useRouterNameToPage('ShowProject'),
     },
     {
       text: '归档',
       icon: <DeliveredProcedureOutlined />,
-      handle: () => console.log('ha'),
+      handle: () => useRouterNameToPage('ShowFile'),
     },
     {
       text: '赞助列表',
       icon: <LikeOutlined />,
-      handle: () => console.log('ha'),
+      handle: () => useRouterNameToPage('ShowSponsor'),
     },
   ],
 };
