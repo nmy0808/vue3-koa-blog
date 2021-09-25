@@ -11,12 +11,14 @@
       </template>
       <template #subTitle> {{ subTitle }} </template>
       <template #extra>
-        <a-button
-          type="primary"
-          v-if="isShowBackBtn"
-          @click="$router.push({ name: 'Show' })"
-          >{{ extraTitle }}</a-button
-        >
+        <transition name="fade">
+          <a-button
+            type="primary"
+            v-if="isShowBackBtn"
+            @click="$router.push({ name: 'Show' })"
+            >{{ extraTitle }}</a-button
+          >
+        </transition>
       </template>
     </a-page-header>
     <buttonGroup :config="buttonGroup" class="buttonGroup" />

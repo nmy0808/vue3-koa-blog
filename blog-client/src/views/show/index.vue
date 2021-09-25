@@ -1,20 +1,24 @@
 <template>
   <div>
     <BViewHeader :config="showIndexViewConfig" />
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
   </div>
 </template>
 
 <script>
 import BViewHeader from '@blocks/viewHeader.vue';
-import {showIndexViewConfig} from '@view-provider/show/index.js'
+import { showIndexViewConfig } from '@view-provider/show/index.js';
 export default {
   components: { BViewHeader },
-  setup(){
+  setup() {
     return {
-      showIndexViewConfig
-    }
-  }
+      showIndexViewConfig,
+    };
+  },
 };
 </script>
 
