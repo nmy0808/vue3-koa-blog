@@ -14,15 +14,15 @@ export const routes = [
     path: '/show',
     name: 'Show',
     component: showIndex,
-    redirect: { name: 'ShowBlog' },
+    redirect: { name: 'ShowBlog' , params: {currentPage: 1}},
     children: [
       {
-        path: 'blog',
+        path: 'blog/:currentPage',
         name: 'ShowBlog',
         component: showBlog,
       },
       {
-        path: 'book',
+        path: 'book/:currentPage',
         name: 'ShowBook',
         component: () => import('@views/show/book.vue'),
       },

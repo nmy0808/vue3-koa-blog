@@ -8,6 +8,7 @@
         </transition>
       </router-view>
     </div>
+   
   </div>
 </template>
 
@@ -17,8 +18,11 @@ import { showIndexViewConfig } from '@view-provider/show/index.js';
 export default {
   components: { BViewHeader },
   setup() {
+   
+  
     return {
       showIndexViewConfig,
+     
     };
   },
 };
@@ -29,4 +33,5 @@ export default {
   width: 50vw;
   margin: 0 auto;
 }
+
 </style>

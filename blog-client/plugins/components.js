@@ -1,9 +1,9 @@
-import { Button, PageHeader, Avatar, Tag, Card } from 'ant-design-vue';
+import { Button, PageHeader, Avatar, Tag, Card, Pagination } from 'ant-design-vue';
 
 /**
  * 插件集
  * @type {import("vue").Plugin[]}
  * */
- export const componentsPlugin = [Button, PageHeader, Avatar, Tag, Card];
+ export const componentsPlugin = [Button, PageHeader, Avatar, Tag, Card, Pagination];
 
 

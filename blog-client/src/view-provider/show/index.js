@@ -18,12 +18,12 @@ export const showIndexViewConfig = {
     {
       text: '日志',
       icon: <BookOutlined />,
-      handle: () => useRouterNameToPage('ShowBlog'),
+      handle: () => useRouterNameToPage('ShowBlog',{params: {currentPage: 1}}),
     },
     {
       text: '读书',
       icon: <ReadOutlined />,
-      handle: () => useRouterNameToPage('ShowBook'),
+      handle: () => useRouterNameToPage('ShowBook',{params: {currentPage: 1}}),
     },
     {
       text: '项目',
