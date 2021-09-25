@@ -1,11 +1,13 @@
 <template>
   <div>
     <BViewHeader :config="showIndexViewConfig" />
-    <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
-        <component :is="Component"></component>
-      </transition>
-    </router-view>
+    <div class="main">
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component"></component>
+        </transition>
+      </router-view>
+    </div>
   </div>
 </template>
 
@@ -23,4 +25,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.main {
+  width: 50vw;
+  margin: 0 auto;
+}
 </style>
