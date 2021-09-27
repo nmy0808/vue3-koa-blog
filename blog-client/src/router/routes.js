@@ -27,17 +27,17 @@ export const routes = [
         component: () => import('@views/show/book.vue'),
       },
       {
-        path: 'file',
+        path: 'project',
         name: 'ShowProject',
         component: () => import('@views/show/project.vue'),
       },
       {
-        path: 'book',
+        path: 'file',
         name: 'ShowFile',
         component: () => import('@views/show/file.vue'),
       },
       {
-        path: 'book',
+        path: 'sponsor',
         name: 'ShowSponsor',
         component: () => import('@views/show/sponsor.vue'),
       },

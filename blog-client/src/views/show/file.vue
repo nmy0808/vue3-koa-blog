@@ -1,7 +1,5 @@
 <template>
-  <div>
-      file
-  </div>
+ <div>2</div>
 </template>
 
 <script>

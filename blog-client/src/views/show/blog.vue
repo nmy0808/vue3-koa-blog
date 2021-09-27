@@ -1,7 +1,7 @@
 <template>
   <div>
     <BCardList :cardList="cardConfig" />
-    <CPagination />
+    <CPagination @change="handleChangePage"/>
   </div>
 </template>
 
@@ -11,9 +11,13 @@ import { cardConfig } from '@view-provider/show/blog.js';
 import CPagination from '@com/pagination.vue';
 export default {
   components: { BCardList, CPagination },
-  setup(props) {
+  setup() {
+    const handleChangePage = (currentPage)=>{
+      console.log(currentPage);
+    }
     return {
       cardConfig,
+      handleChangePage
     };
   },
 };

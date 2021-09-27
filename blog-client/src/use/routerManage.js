@@ -4,6 +4,9 @@ import { useRoute, useRouter } from 'vue-router';
 export const useRouterNameToPage = (pageName, otherOption = {}) => {
   router.push({ name: pageName, ...otherOption });
 };
+export const useRouterPathToPage = (path, otherOption = {}) => {
+  router.push({ path: path, ...otherOption });
+};
 // 获取当前路由白名单
 export const useCurrentRouterToNameWhiteStatus = (whiteArr = []) => {
   const route = useRoute();
@@ -14,7 +17,7 @@ export const useCurrentRouterToNameWhiteStatus = (whiteArr = []) => {
 export const useRouteParamChange = (paramName) => (value) =>
   router.push({ params: { [paramName]: value } });
 
-// 获取当前指定的route.param的ref
+// 监听route.param[属性], 并返回这个[属性]的ref
 export const useLinkedRouteParam = (paramName, isNum = true) => {
   const route = useRoute();
   const paramRef = ref('');

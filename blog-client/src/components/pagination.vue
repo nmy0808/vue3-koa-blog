@@ -16,6 +16,7 @@ import { useRoute, useRouter } from 'vue-router';
 import { backTop } from '@use/scrollTop.js';
 import { useRouteParamChange, useLinkedRouteParam } from '@use/routerManage.js';
 export default {
+  emits:['change'],
   props: {
     total: {
       type: Number,
