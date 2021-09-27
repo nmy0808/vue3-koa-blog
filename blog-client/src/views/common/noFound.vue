@@ -6,12 +6,6 @@
 import { Empty} from 'ant-design-vue'
   export default {
     components: {AEmpty:Empty},
-     setup() {
-      
-      return {
-
-      }
-    }
   }
 </script>
 
