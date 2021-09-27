@@ -7,6 +7,10 @@ import showBlog from '@views/show/blog.vue';
  * */
 export const routes = [
   {
+    path: '/:pathMatch(.*)*',
+    component: () => import('@views/common/noFound.vue'),
+  },
+  {
     path: '/',
     redirect: '/show',
   },
