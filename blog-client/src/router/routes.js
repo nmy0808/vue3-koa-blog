@@ -1,5 +1,6 @@
 import showIndex from '@views/show/index.vue';
 import showBlog from '@views/show/blog.vue';
+import manageIndex from '@views/manage/index.vue';
 
 /**
  * 路由映射
@@ -49,6 +50,19 @@ export const routes = [
         path: 'about',
         name: 'ShowAbout',
         component: () => import('@views/show/about.vue'),
+      },
+    ],
+  },
+  {
+    path: '/manage',
+    name: 'Manage',
+    component: manageIndex,
+    redirect: { name: 'ManageLogin' },
+    children: [
+      {
+        path: 'login',
+        name: 'ManageLogin',
+        component: () => import('@views/manage/login.vue'),
       },
     ],
   },

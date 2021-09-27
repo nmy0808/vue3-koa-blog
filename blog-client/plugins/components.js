@@ -6,6 +6,8 @@ import {
   Card,
   Pagination,
   Timeline,
+  Form,
+  Input
 } from 'ant-design-vue';
 
 /**
@@ -20,4 +22,6 @@ export const componentsPlugin = [
   Card,
   Pagination,
   Timeline,
+  Form,
+  Input
 ];
