@@ -14,7 +14,7 @@ export const routes = [
     path: '/show',
     name: 'Show',
     component: showIndex,
-    redirect: { name: 'ShowBlog' , params: {currentPage: 1}},
+    redirect: { name: 'ShowBlog', params: { currentPage: 1 } },
     children: [
       {
         path: 'blog/:currentPage',
@@ -40,6 +40,11 @@ export const routes = [
         path: 'sponsor',
         name: 'ShowSponsor',
         component: () => import('@views/show/sponsor.vue'),
+      },
+      {
+        path: 'about',
+        name: 'ShowAbout',
+        component: () => import('@views/show/about.vue'),
       },
     ],
   },
