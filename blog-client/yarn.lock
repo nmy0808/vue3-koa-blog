@@ -886,7 +886,15 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
+"@babel/runtime-corejs3@^7.11.2":
+  version "7.15.4"
+  resolved "https://registry.nlark.com/@babel/runtime-corejs3/download/@babel/runtime-corejs3-7.15.4.tgz#403139af262b9a6e8f9ba04a6fdcebf8de692bf1"
+  integrity sha1-QDE5ryYrmm6Pm6BKb9zr+N5pK/E=
+  dependencies:
+    core-js-pure "^3.16.0"
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.0", "@babel/runtime@^7.11.2", "@babel/runtime@^7.8.4":
   version "7.15.4"
   resolved "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
   integrity sha1-/RfRa/34eObdAtGXU6OfqKjZyEo=
@@ -2659,7 +2667,7 @@ commander@2.17.x:
   resolved "https://registry.nlark.com/commander/download/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
   integrity sha1-vXerfebelCBc6sxy8XFtKfIKd78=
 
-commander@^2.18.0, commander@^2.20.0:
+commander@^2.18.0, commander@^2.20.0, commander@^2.20.3:
   version "2.20.3"
   resolved "https://registry.nlark.com/commander/download/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha1-/UhehMA+tIgcIHIrpIA16FMa6zM=
@@ -2812,6 +2820,11 @@ core-js-compat@^3.16.0, core-js-compat@^3.16.2, core-js-compat@^3.6.5:
   dependencies:
     browserslist "^4.17.0"
     semver "7.0.0"
+
+core-js-pure@^3.16.0:
+  version "3.18.1"
+  resolved "https://registry.npmmirror.com/core-js-pure/download/core-js-pure-3.18.1.tgz?cache=0&sync_timestamp=1632695707726&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcore-js-pure%2Fdownload%2Fcore-js-pure-3.18.1.tgz#097d34d24484be45cea700a448d1e74622646c80"
+  integrity sha1-CX000kSEvkXOpwCkSNHnRiJkbIA=
 
 core-js@^3.15.1, core-js@^3.6.5:
   version "3.18.0"
@@ -2994,6 +3007,11 @@ cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.nlark.com/cssesc/download/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha1-N3QZGZA7hoVl4cCep0dEXNGJg+4=
+
+cssfilter@0.0.10:
+  version "0.0.10"
+  resolved "https://registry.nlark.com/cssfilter/download/cssfilter-0.0.10.tgz#c6d2672632a2e5c83e013e6864a42ce8defd20ae"
+  integrity sha1-xtJnJjKi5cg+AT5oZKQs6N79IK4=
 
 cssnano-preset-default@^4.0.0, cssnano-preset-default@^4.0.8:
   version "4.0.8"
@@ -8037,6 +8055,14 @@ vue@^3.0.0:
     "@vue/server-renderer" "3.2.18"
     "@vue/shared" "3.2.18"
 
+wangeditor@4.6.3:
+  version "4.6.3"
+  resolved "https://registry.nlark.com/wangeditor/download/wangeditor-4.6.3.tgz?cache=0&sync_timestamp=1631190362814&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fwangeditor%2Fdownload%2Fwangeditor-4.6.3.tgz#cc572911b20e318fca8254af0fe36efc40642bdc"
+  integrity sha1-zFcpEbIOMY/KglSvD+Nu/EBkK9w=
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@babel/runtime-corejs3" "^7.11.2"
+
 warning@^4.0.0:
   version "4.0.3"
   resolved "https://registry.nlark.com/warning/download/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
@@ -8315,6 +8341,14 @@ ws@^6.0.0, ws@^6.2.1:
   integrity sha1-3Vzb1XqZeZFgl2UtePHMX66gwy4=
   dependencies:
     async-limiter "~1.0.0"
+
+xss@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.nlark.com/xss/download/xss-1.0.9.tgz#3ffd565571ff60d2e40db7f3b80b4677bec770d2"
+  integrity sha1-P/1WVXH/YNLkDbfzuAtGd77HcNI=
+  dependencies:
+    commander "^2.20.3"
+    cssfilter "0.0.10"
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"

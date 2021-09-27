@@ -64,6 +64,11 @@ export const routes = [
         name: 'ManageLogin',
         component: () => import('@views/manage/login.vue'),
       },
+      {
+        path: 'editor',
+        name: 'ManageEditor',
+        component: () => import('@views/manage/editor.vue'),
+      },
     ],
   },
 ];
