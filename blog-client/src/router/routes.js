@@ -69,6 +69,11 @@ export const routes = [
         name: 'ManageEditor',
         component: () => import('@views/manage/editor.vue'),
       },
+      {
+        path: "articles/:currentPage",
+        name: "ManageArticle",
+        component: () => import("@views/manage/article.vue")
+      }
     ],
   },
 ];
